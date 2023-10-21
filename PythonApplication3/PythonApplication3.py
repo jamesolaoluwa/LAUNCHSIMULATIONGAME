@@ -32,7 +32,6 @@ def login():
    with open('userdata.txt','r') as f:
        for line in f:
             fields = line.split(',')
-            print(fields,"dbg")
             users.append(fields[0])
             passwords.append(fields[1])
             letIn = False
