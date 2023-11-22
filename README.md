@@ -45,5 +45,4 @@ success.txt: A text file where successful missions are recorded.
 **Contributions**
 Any Contributions to my project are welcome! If you have any suggestions or improvements, please feel free to create a pull request.
 
-License
 Enjoy your journey through space with the NASA Control Desk! 🚀🌌
