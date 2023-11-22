@@ -1,5 +1,30 @@
+import pygame
 import random
 import time
+
+# Pygame initialization
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("NASA Control Desk")
+font = pygame.font.Font(None, 36)
+
+# Global variables
+user_choice = ""
+username = ""
+user_password = ""
+planet = ""
+outcome = ["yes", "no"]
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
+# Game loop flag
+running = True
+
+def display_text(text, x, y):
+    text = font.render(text, True, WHITE)
+    screen.blit(text, (x, y))
 
 def main():
      print("""
@@ -23,7 +48,8 @@ WHAT WOULD YOU LIKE TO DO?
          main()
          
 def login():
-    
+   
+   global username, user_password
    username=  input("Enter your username: ")
    user_password = input("Enter your password: ")
    users = []
@@ -48,7 +74,8 @@ def login():
                 
 
 def launch():
-   
+    
+    global planet
     planet = input("What planet would you like to go to:  ")
     print(f"Launch into {planet} has started........")
     time.sleep(1)
@@ -73,37 +100,46 @@ def launch():
         main()
         
 def writesuccess(planet):
-    with open("success.txt","a") as file:
+    with open("success.txt", "a") as file:
         file.write(f"{planet} \n")
-        print("Success recorded.....")
-        time.sleep(1)
-        main()
+    print("Success recorded.....")
 
 def success():
-    with open("success.txt","r") as sc:
-        for line in sc: 
-            print(line)
-    time.sleep(1)
-    main()
+    with open("success.txt", "r") as sc:
+        successes = sc.readlines()
+    return successes
     
 
 login()
-    
-            
+
+while running:
+    screen.fill(BLACK)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    if user_choice == "":
+        display_text("1. Launch", 100, 50)
+        display_text("2. View Successes", 100, 100)
+        display_text("3. Quit", 100, 150)
+       
+
+    elif user_choice == "1":
+        launch()
         
 
-     
-        
-        
-        
+    elif user_choice == "2":
+        successes = success()
+        y = 50
+        for line in successes:
+            display_text(line, 100, y)
+            y += 50
 
-        
+    elif user_choice == "3":
+        running = False
 
-        
+    # Update the display
+    pygame.display.flip()
 
-        
-        
-
-        
-        
-        
+pygame.quit()
