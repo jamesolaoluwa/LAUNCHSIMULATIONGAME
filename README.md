@@ -1,33 +1,47 @@
-# LAUNCH SIMULATION GAME
-NASA Launch Game
+# NASA Control Desk
+Welcome to my NASA Control Desk Python program! This program simulates a control desk for launching missions to different planets and allows you to view successful missions.
 
-## Description
-The NASA Control Desk Simulator is a Python-based interactive program, where users can simulate the launch of a spacecraft to different planets. This simple, yet engaging program offers my basic understanding of control desk operations and decision-making processes in Python.
+**How to Use**
 
-## Features
-- **Launch Simulation**: Users can choose a planet for their launch mission. The program then simulates a countdown and randomly determines if the launch is successful.
-- **View Launch Successes**: Users can view the history of successful launches.
-- **Login System**: Includes a basic login system where user credentials are verified from a text file (`userdata.txt`).
-- **Success Recording**: Successful launches are recorded to a text file (`success.txt`).
+Login: You'll need to log in with your username and password to access the control desk. Username and password information is stored in the userdata.txt file.
 
-## How to Use
-1. **Start the Program**: Run the script to start the simulation.
-2. **Login**: Enter your username and password when prompted.
-3. **Choose an Option**:
-   - Select `1` to initiate a launch simulation.
-   - Select `2` to view the list of successful launches.
-   - Select `3` to exit the program.
+**Main Menu:**
 
-## Installation
-1. Ensure you have Python installed on your machine.
-2. Download or clone this repository.
-3. Run `python nasa_control.py` in your terminal.
+Choose from the following options:
+1. Launch: Start a new mission to a planet of your choice.
+2. View Successes: View a list of successful missions.
+3. Quit: Quit the program.
+Features
+The program allows you to log in with a username and password.
+You can initiate missions to different planets.
+The program simulates the countdown and liftoff of the mission.
+Mission outcomes (success or failure) are determined randomly.
+Successful missions are recorded in the success.txt file.
+You can view a list of successful missions from the main menu.
+Installation
+Make sure you have Python installed on your system.
 
-## File Structure
-- `nasa_control.py`: The main Python script.
-- `userdata.txt`: A text file containing usernames and passwords.
-- `success.txt`: A text file where successful launches are recorded.
+**Install the required library, Pygame, using pip:**
 
-## Requirements
-- Python 3.x
-- Two text files: `userdata.txt` and `success.txt` in the same directory as your script.
+Copy code
+pip install pygame
+Download or clone this repository to your local machine.
+
+Run the program by executing main.py:
+
+css
+Copy code
+python main.py
+Usage
+Follow the on-screen prompts and input your choices to navigate through the control desk.
+Remember to log in with a valid username and password.
+Files
+main.py: The main Python script for the NASA Control Desk program.
+userdata.txt: A text file containing user information (username, password).
+success.txt: A text file where successful missions are recorded.
+
+**Contributions**
+Any Contributions to my project are welcome! If you have any suggestions or improvements, please feel free to create a pull request.
+
+License
+Enjoy your journey through space with the NASA Control Desk! 🚀🌌
