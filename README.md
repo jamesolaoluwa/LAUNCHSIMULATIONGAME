@@ -32,10 +32,12 @@ Run the program by executing main.py:
 css
 Copy code
 python main.py
-Usage
+
+**Usage**
 Follow the on-screen prompts and input your choices to navigate through the control desk.
 Remember to log in with a valid username and password.
-Files
+
+**Files**
 main.py: The main Python script for the NASA Control Desk program.
 userdata.txt: A text file containing user information (username, password).
 success.txt: A text file where successful missions are recorded.
